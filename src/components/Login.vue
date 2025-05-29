@@ -57,3 +57,5 @@ function login() {
   console.log("Password:", password.value);
 }
 </script>
+
+<style scoped></style>
