@@ -1,20 +1,14 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
+import Login from "./components/Login.vue";
 import TheWelcome from "./components/TheWelcome.vue";
 </script>
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="./assets/admin.svg"
-      width="250"
-      height="250"
-    />
-
     <div class="wrapper">
       <HelloWorld msg="Welcome to Admin Service!" />
+      <Login />
     </div>
   </header>
 
@@ -46,7 +40,8 @@ header {
 
   header .wrapper {
     display: flex;
-    place-items: flex-start;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
   }
 }
