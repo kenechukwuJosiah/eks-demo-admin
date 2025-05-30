@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: kenechukwujoisah/eks-demo-frontend-admin
+  repository: kenechukwujosiah/eks-demo-frontend-admin
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "8f31c4b"
