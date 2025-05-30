@@ -3,7 +3,7 @@
     <!-- Sidebar -->
     <aside class="w-60 bg-white p-5 shadow-md">
       <div class="mb-10">
-        <h2 class="text-xl font-bold text-blue-600">Dashboard</h2>
+        <h2 class="text-xl font-bold text-blue-600">Admin Dashboard</h2>
       </div>
 
       <nav class="space-y-3">
@@ -72,6 +72,17 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+onMounted(() => {
+  const loginStatus = localStorage.getItem("loginStatus");
+  if (!loginStatus) {
+    router.push("/login");
+  }
+});
 const currentDate = new Date().toLocaleDateString(undefined, {
   weekday: "long",
   month: "short",
