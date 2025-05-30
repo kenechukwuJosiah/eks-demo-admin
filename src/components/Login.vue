@@ -48,6 +48,9 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+localStorage.removeItem("loginStatus");
+const router = useRouter();
 
 const email = ref("");
 const password = ref("");
@@ -55,6 +58,9 @@ const password = ref("");
 function login() {
   console.log("Email:", email.value);
   console.log("Password:", password.value);
+  const randomText = Math.random().toString(36).substring(2, 15);
+  localStorage.setItem("loginStatus", randomText);
+  router.push("/dashboard");
 }
 </script>
 

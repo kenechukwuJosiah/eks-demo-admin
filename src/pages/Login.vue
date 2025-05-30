@@ -6,8 +6,9 @@ import TheWelcome from "../components/TheWelcome.vue";
 
 <template>
   <header>
-    <div class="wrapper">
+    <div class="wrapper w-full space-y-3">
       <HelloWorld msg="Welcome to Admin Service!" />
+      <div class="h-4"></div>
       <Login />
     </div>
   </header>
@@ -40,6 +41,7 @@ header {
 
   header .wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;

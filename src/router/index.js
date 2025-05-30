@@ -3,7 +3,7 @@ import Dashboard from "../pages/Dashboard.vue";
 import Login from "../pages/Login.vue";
 
 const routes = [
-  { path: "/", name: "Home", redirect: "/dashboard" },
+  { path: "/", name: "Home", redirect: "/login" },
   { path: "/login", name: "Login", component: Login },
   { path: "/dashboard", name: "Dashboard", component: Dashboard },
 ];
